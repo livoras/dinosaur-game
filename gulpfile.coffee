@@ -36,6 +36,11 @@ gulp.task 'copy', ->
   gulp.src paths.copy[2]
       .pipe gulp.dest 'bin/assets'
 
+gulp.task 'html', ->
+  gulp.src paths.copy[0]
+      .pipe gulp.dest 'bin/'
+      .pipe livereload()
+
 gulp.task 'lib', ->
   gulp.src paths.lib
       .pipe gulp.dest 'bin/lib'
